@@ -1,0 +1,43 @@
+<div class="container-fluid" ng-controller="plk">
+  <form name="form">{{zbvc}}
+    <input type="text" name="tx" ng-value="nbgf.bid" >
+      <div class="form-group">
+         <div class="input-group">
+            <label class="input-group-addon">分类</label>
+            <select class="form-control" ng-model="zbvc.tid" ng-init="zbvc.tid=1">
+              <option ng-value="gh.tid" ng-repeat="gh in pl">{{gh.tid}}</option>
+            </select>
+         </div>
+      </div>
+      <div class="form-group">
+         <div class="input-group">
+            <label class="input-group-addon">书籍</label>
+            <input type="text" ng-value="nbgf.bname" ng-model="zbvc.bname" name="book" required="required" class="form-control">
+         </div>
+      </div>
+      <div class="form-group">
+         <div class="input-group">
+            <label class="input-group-addon">作者</label>
+            <input type="text" ng-value="nbgf.author" ng-model="zbvc.author" name="zuozhe" required="required" class="form-control">
+         </div>
+      </div>
+      <div class="form-group">
+         <div class="input-group">
+            <label class="input-group-addon">出版社</label>
+            <input type="text" ng-value="nbgf.press" ng-model="zbvc.press" name="chubanshe" required="required" class="form-control">
+         </div>
+      </div>
+      <div class="form-group">
+         <div class="input-group">
+            <label class="input-group-addon">状态</label>
+            <select ng-model="zbvc.ifbname" ng-init="zbvc.ifbname='y'" name="zhuangtai" class="form-control">
+               <option ng-value="'y'">{{nbgf.ifbname}}</option>
+               <option ng-value="'n'">n</option>
+            </select>
+         </div>
+      </div>
+      <div class="form-group">
+        <span type="button" class="btn btn-primary" ng-click="xuigai(nbgf.bid)">确定</span>
+      </div>
+  </form>
+</div>
